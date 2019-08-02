@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Resolver",
     platforms: [
-        .iOS(.v11)
+        .iOS(.v10)
     ],
     products: [
         .library(name: "Resolver", targets: ["Resolver"])
