@@ -5,8 +5,19 @@ import PackageDescription
 
 let package = Package(
     name: "Resolver",
-    platforms: [ .macOS(.v10_14), .iOS(.v11) ],
-    products: [ .library(name: "Resolver", targets: ["Resolver"]) ],
-    targets: [ .target(name: "Resolver", dependencies: [], path: "Resolver") ],
+    platforms: [
+        .iOS(.v11)
+    ],
+    products: [
+        .library(name: "Resolver", targets: ["Resolver"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/Quick/Quick.git", from: "2.0.0"),
+        .package(url: "https://github.com/Quick/Nimble.git", from: "8.0.0"),
+    ],
+    targets: [
+        .target(name: "Resolver", dependencies: [], path: "Resolver"),
+        .testTarget(name: "ResolverTests", dependencies: ["Quick", "Nimble"], path: "ResolverTests")
+    ],
     swiftLanguageVersions: [ .v5 ]
 )
