@@ -112,35 +112,35 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7E4FC89E22F48FD900796B3F /* PBXContainerItemProxy */ = {
+		7E4FC8A522F4951F00796B3F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Quick::QuickSpecBase";
+			remoteInfo = QuickSpecBase;
+		};
+		7E4FC8A622F4951F00796B3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Nimble::Nimble";
 			remoteInfo = Nimble;
 		};
-		7E4FC89F22F48FD900796B3F /* PBXContainerItemProxy */ = {
+		7E4FC8A722F4951F00796B3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Quick::Quick";
 			remoteInfo = Quick;
 		};
-		7E4FC8A022F48FD900796B3F /* PBXContainerItemProxy */ = {
+		7E4FC8A822F4951F00796B3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Quick::QuickSpecBase";
 			remoteInfo = QuickSpecBase;
 		};
-		7E4FC8A122F48FD900796B3F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "Quick::QuickSpecBase";
-			remoteInfo = QuickSpecBase;
-		};
-		7E4FC8A222F48FDA00796B3F /* PBXContainerItemProxy */ = {
+		7E4FC8A922F4952000796B3F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -150,8 +150,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7E4FC8A322F4912900796B3F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		7E4FC8A422F4912900796B3F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		"Nimble::Nimble::Product" /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_100 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatisfyAnyOf.swift; sourceTree = "<group>"; };
@@ -304,11 +302,11 @@
 		OBJ_111 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				"Resolver::Resolver::Product" /* Resolver.framework */,
 				"Quick::QuickSpecBase::Product" /* QuickSpecBase.framework */,
-				"Nimble::Nimble::Product" /* Nimble.framework */,
-				"Resolver::ResolverTests::Product" /* ResolverTests.xctest */,
 				"Quick::Quick::Product" /* Quick.framework */,
+				"Resolver::Resolver::Product" /* Resolver.framework */,
+				"Resolver::ResolverTests::Product" /* ResolverTests.xctest */,
+				"Nimble::Nimble::Product" /* Nimble.framework */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -324,8 +322,8 @@
 		OBJ_15 /* ResolverTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* ResolverTests.swift */,
 				OBJ_16 /* Info.plist */,
+				OBJ_17 /* ResolverTests.swift */,
 			);
 			path = ResolverTests;
 			sourceTree = SOURCE_ROOT;
@@ -426,8 +424,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
-				7E4FC8A322F4912900796B3F /* LICENSE */,
-				7E4FC8A422F4912900796B3F /* README.md */,
 				OBJ_7 /* Sources */,
 				OBJ_14 /* Tests */,
 				OBJ_18 /* Dependencies */,
@@ -536,11 +532,11 @@
 		OBJ_8 /* Resolver */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* ResolverRegistration.swift */,
-				OBJ_11 /* ResolverExtraction.swift */,
-				OBJ_13 /* ResolvingContainer.swift */,
 				OBJ_9 /* Resolver.h */,
 				OBJ_10 /* Info.plist */,
+				OBJ_11 /* ResolverExtraction.swift */,
+				OBJ_12 /* ResolverRegistration.swift */,
+				OBJ_13 /* ResolvingContainer.swift */,
 			);
 			path = Resolver;
 			sourceTree = SOURCE_ROOT;
@@ -672,9 +668,9 @@
 			productReference = "Resolver::ResolverTests::Product" /* ResolverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		"Resolver::SwiftPMPackageDescription" /* ResolverDescription */ = {
+		"Resolver::SwiftPMPackageDescription" /* ResolverPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_243 /* Build configuration list for PBXNativeTarget "ResolverDescription" */;
+			buildConfigurationList = OBJ_243 /* Build configuration list for PBXNativeTarget "ResolverPackageDescription" */;
 			buildPhases = (
 				OBJ_246 /* Sources */,
 			);
@@ -682,7 +678,7 @@
 			);
 			dependencies = (
 			);
-			name = ResolverDescription;
+			name = ResolverPackageDescription;
 			productName = ResolverPackageDescription;
 			productType = "com.apple.product-type.framework";
 		};
@@ -697,9 +693,10 @@
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Resolver" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
@@ -707,15 +704,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				"Resolver::Resolver" /* Resolver */,
-				"Resolver::ResolverTests" /* ResolverTests */,
-				"Resolver::ResolverPackageTests::ProductTarget" /* ResolverPackageTests */,
-				"Resolver::SwiftPMPackageDescription" /* ResolverDescription */,
 				"Nimble::Nimble" /* Nimble */,
 				"Nimble::SwiftPMPackageDescription" /* NimblePackageDescription */,
 				"Quick::Quick" /* Quick */,
 				"Quick::SwiftPMPackageDescription" /* QuickPackageDescription */,
 				"Quick::QuickSpecBase" /* QuickSpecBase */,
+				"Resolver::Resolver" /* Resolver */,
+				"Resolver::SwiftPMPackageDescription" /* ResolverPackageDescription */,
+				"Resolver::ResolverPackageTests::ProductTarget" /* ResolverPackageTests */,
+				"Resolver::ResolverTests" /* ResolverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -866,27 +863,27 @@
 		OBJ_217 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Quick::QuickSpecBase" /* QuickSpecBase */;
-			targetProxy = 7E4FC8A022F48FD900796B3F /* PBXContainerItemProxy */;
+			targetProxy = 7E4FC8A522F4951F00796B3F /* PBXContainerItemProxy */;
 		};
 		OBJ_252 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Resolver::ResolverTests" /* ResolverTests */;
-			targetProxy = 7E4FC8A222F48FDA00796B3F /* PBXContainerItemProxy */;
+			targetProxy = 7E4FC8A922F4952000796B3F /* PBXContainerItemProxy */;
 		};
 		OBJ_263 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Nimble::Nimble" /* Nimble */;
-			targetProxy = 7E4FC89E22F48FD900796B3F /* PBXContainerItemProxy */;
+			targetProxy = 7E4FC8A622F4951F00796B3F /* PBXContainerItemProxy */;
 		};
 		OBJ_264 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Quick::Quick" /* Quick */;
-			targetProxy = 7E4FC89F22F48FD900796B3F /* PBXContainerItemProxy */;
+			targetProxy = 7E4FC8A722F4951F00796B3F /* PBXContainerItemProxy */;
 		};
 		OBJ_265 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Quick::QuickSpecBase" /* QuickSpecBase */;
-			targetProxy = 7E4FC8A122F48FD900796B3F /* PBXContainerItemProxy */;
+			targetProxy = 7E4FC8A822F4951F00796B3F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -951,7 +948,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -960,7 +957,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1031,7 +1028,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1040,7 +1037,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1121,7 +1118,7 @@
 				INFOPLIST_FILE = Resolver.xcodeproj/Resolver_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -1132,8 +1129,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Resolver;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -1149,7 +1146,7 @@
 				INFOPLIST_FILE = Resolver.xcodeproj/Resolver_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
@@ -1160,8 +1157,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = Resolver;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -1169,7 +1166,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1178,7 +1175,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5";
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -1211,15 +1208,15 @@
 				INFOPLIST_FILE = Resolver.xcodeproj/ResolverTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = ResolverTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
@@ -1239,15 +1236,15 @@
 				INFOPLIST_FILE = Resolver.xcodeproj/ResolverTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
 				TARGET_NAME = ResolverTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -1268,7 +1265,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
@@ -1292,7 +1289,7 @@
 					"SWIFT_PACKAGE=1",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				OTHER_SWIFT_FLAGS = "-DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
@@ -1368,7 +1365,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_243 /* Build configuration list for PBXNativeTarget "ResolverDescription" */ = {
+		OBJ_243 /* Build configuration list for PBXNativeTarget "ResolverPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_244 /* Debug */,

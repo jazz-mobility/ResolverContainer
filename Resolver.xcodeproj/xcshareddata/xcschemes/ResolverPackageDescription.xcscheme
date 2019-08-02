@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "Resolver::SwiftPMPackageDescription"
-               BuildableName = "ResolverDescription"
-               BlueprintName = "ResolverDescription"
+               BuildableName = "ResolverPackageDescription"
+               BlueprintName = "ResolverPackageDescription"
                ReferencedContainer = "container:Resolver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "Resolver::SwiftPMPackageDescription"
-            BuildableName = "ResolverDescription"
-            BlueprintName = "ResolverDescription"
+            BuildableName = "ResolverPackageDescription"
+            BlueprintName = "ResolverPackageDescription"
             ReferencedContainer = "container:Resolver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,8 +64,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "Resolver::SwiftPMPackageDescription"
-            BuildableName = "ResolverDescription"
-            BlueprintName = "ResolverDescription"
+            BuildableName = "ResolverPackageDescription"
+            BlueprintName = "ResolverPackageDescription"
             ReferencedContainer = "container:Resolver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
