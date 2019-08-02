@@ -22,6 +22,7 @@ install:
   - bundle install --without=documentation
 
 script:
+  - swift package update
   - if [ $RUN_TESTS == "YES" ]; then
       xcodebuild clean test -workspace "$WORKSPACE" -scheme "$SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=YES ENABLE_TESTABILITY=YES | xcpretty;
     else
