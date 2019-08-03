@@ -101,9 +101,9 @@
 		OBJ_224 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* Package.swift */; };
 		OBJ_229 /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* QuickSpecBase.m */; };
 		OBJ_231 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		OBJ_238 /* ResolverExtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ResolverExtraction.swift */; };
-		OBJ_239 /* ResolverRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ResolverRegistration.swift */; };
-		OBJ_240 /* ResolvingContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ResolvingContainer.swift */; };
+		OBJ_238 /* InstanceResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* InstanceResolving.swift */; };
+		OBJ_239 /* ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ResolverRegistering.swift */; };
+		OBJ_240 /* ResolverContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ResolverContainer.swift */; };
 		OBJ_247 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_258 /* ResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* ResolverTests.swift */; };
 		OBJ_260 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Nimble::Nimble::Product" /* Nimble.framework */; };
@@ -161,10 +161,10 @@
 		OBJ_107 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
 		OBJ_108 /* SourceLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
 		OBJ_109 /* Stringers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stringers.swift; sourceTree = "<group>"; };
-		OBJ_11 /* ResolverExtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverExtraction.swift; sourceTree = "<group>"; };
+		OBJ_11 /* InstanceResolving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceResolving.swift; sourceTree = "<group>"; };
 		OBJ_110 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/kozlek/Documents/Resolver/.build/checkouts/Nimble/Package.swift; sourceTree = "<group>"; };
-		OBJ_12 /* ResolverRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverRegistration.swift; sourceTree = "<group>"; };
-		OBJ_13 /* ResolvingContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolvingContainer.swift; sourceTree = "<group>"; };
+		OBJ_12 /* ResolverRegistering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverRegistering.swift; sourceTree = "<group>"; };
+		OBJ_13 /* ResolverContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverContainer.swift; sourceTree = "<group>"; };
 		OBJ_16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		OBJ_17 /* ResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTests.swift; sourceTree = "<group>"; };
 		OBJ_21 /* Behavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Behavior.swift; sourceTree = "<group>"; };
@@ -420,7 +420,7 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -429,7 +429,6 @@
 				OBJ_18 /* Dependencies */,
 				OBJ_111 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_52 /* Nimble 8.0.2 */ = {
@@ -534,9 +533,9 @@
 			children = (
 				OBJ_9 /* Resolver.h */,
 				OBJ_10 /* Info.plist */,
-				OBJ_11 /* ResolverExtraction.swift */,
-				OBJ_12 /* ResolverRegistration.swift */,
-				OBJ_13 /* ResolvingContainer.swift */,
+				OBJ_12 /* ResolverRegistering.swift */,
+				OBJ_11 /* InstanceResolving.swift */,
+				OBJ_13 /* ResolverContainer.swift */,
 			);
 			path = Resolver;
 			sourceTree = SOURCE_ROOT;
@@ -699,7 +698,7 @@
 				English,
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_111 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -835,9 +834,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_238 /* ResolverExtraction.swift in Sources */,
-				OBJ_239 /* ResolverRegistration.swift in Sources */,
-				OBJ_240 /* ResolvingContainer.swift in Sources */,
+				OBJ_238 /* InstanceResolving.swift in Sources */,
+				OBJ_239 /* ResolverRegistering.swift in Sources */,
+				OBJ_240 /* ResolverContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,11 +13,11 @@ import Nimble
 
 class ResolverTests: QuickSpec {
     override func spec() {
-        describe("ResolvingContainer") {
-            var container: ResolvingContainer!
+        describe("ResolverContainer") {
+            var container: ResolverContainer!
 
             beforeEach {
-                container = ResolvingContainer()
+                container = ResolverContainer()
             }
 
             context("when registered object") {
@@ -37,23 +37,23 @@ class ResolverTests: QuickSpec {
                     expect(object).to(beIdenticalTo(instance))
                 }
 
-                context("when unregistered object") {
+                context("and unregistered object") {
 
                     beforeEach {
                         container.unregister(TestTest.self)
                     }
 
-                    it("will fail to resolve the type") {
+                    it("fails to resolve the type") {
                         do {
                             let _ = try container.resolve(TestTest.self)
                         } catch {
-                            expect(error).to(matchError(ResolvingContainer.Error.unregisteredType("TestTest")))
+                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
                         }
 
                         do {
                             let _: TestTest = try container.resolve()
                         } catch {
-                            expect(error).to(matchError(ResolvingContainer.Error.unregisteredType("TestTest")))
+                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
                         }
                     }
                 }

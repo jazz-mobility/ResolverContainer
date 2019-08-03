@@ -1,5 +1,5 @@
 //
-//  ResolvingContainer.swift
+//  ResolverContainer.swift
 //  Resolver
 //
 //  Created by Natan Zalkin on 26/07/2019.
@@ -32,7 +32,7 @@
 import Foundation
 
 /// Thread safe container allowing to register and extract resolvers
-public class ResolvingContainer {
+public class ResolverContainer {
 
     enum Error: Swift.Error {
         case unregisteredType(String)
@@ -40,9 +40,9 @@ public class ResolvingContainer {
     }
 
     private var entries = [ObjectIdentifier: () -> Any]()
-    private var syncQueue = DispatchQueue(label: "ResolvingContainer.SyncQueue")
+    private var syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue")
 
-    public init(registration: ((ResolvingContainer) -> Void)? = nil) {
+    public init(registration: ((ResolverContainer) -> Void)? = nil) {
         defer {
             registration?(self)
         }
@@ -50,7 +50,7 @@ public class ResolvingContainer {
 
 }
 
-extension ResolvingContainer: ResolverRegistration {
+extension ResolverContainer: ResolverRegistering {
 
     public func register<T>(resolver: @escaping () -> T) {
         syncQueue.sync { entries[ObjectIdentifier(T.self)] = resolver }
@@ -63,7 +63,7 @@ extension ResolvingContainer: ResolverRegistration {
 
 }
 
-extension ResolvingContainer: ResolverExtraction {
+extension ResolverContainer: InstanceResolving {
 
     public func resolve<T>(_ type: T.Type) throws -> T {
 

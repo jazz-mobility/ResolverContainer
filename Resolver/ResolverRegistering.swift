@@ -1,5 +1,5 @@
 //
-//  ResolverExtraction.swift
+//  ResolverRegistering.swift
 //  Resolver
 //
 //  Created by Natan Zalkin on 26/07/2019.
@@ -31,19 +31,14 @@
 
 import Foundation
 
-/// A protocol describing resolving of instance or metatype
-public protocol ResolverExtraction {
+/// A protocol describing registration of specific resolver
+public protocol ResolverRegistering {
 
-    /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found
-    func resolve<T>(_ type: T.Type) throws -> T
+    /// Registers new resolver of specified type
+    func register<T>(resolver: @escaping () -> T)
 
-}
+    /// Unregister resolver associated with specified type
+    @discardableResult
+    func unregister<T>(_ type: T.Type) -> Bool
 
-public extension ResolverExtraction {
-
-    /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found
-    func resolve<T>() throws -> T {
-        return try resolve(T.self)
-    }
-    
 }
