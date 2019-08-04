@@ -22,36 +22,36 @@ class ResolverTests: QuickSpec {
 
             context("when registered object") {
 
-                var instance: TestTest!
+                var instance: TestValue!
 
                 beforeEach {
-                    let object = TestTest()
+                    let object = TestValue()
                     instance = object
                     container.register { object }
                 }
 
                 it("can resolve it later") {
-                    expect(try! container.resolve(TestTest.self)).to(beIdenticalTo(instance))
+                    expect(try! container.resolve(TestValue.self)).to(beIdenticalTo(instance))
 
-                    let object: TestTest = try! container.resolve()
+                    let object: TestTest<Int> = try! container.resolve()
                     expect(object).to(beIdenticalTo(instance))
                 }
 
                 context("and unregistered object") {
 
                     beforeEach {
-                        container.unregister(TestTest.self)
+                        container.unregister(TestTest<Int>.self)
                     }
 
                     it("fails to resolve the type") {
                         do {
-                            let _ = try container.resolve(TestTest.self)
+                            let _ = try container.resolve(TestValue.self)
                         } catch {
                             expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
                         }
 
                         do {
-                            let _: TestTest = try container.resolve()
+                            let _: TestTest<Int> = try container.resolve()
                         } catch {
                             expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
                         }
@@ -62,4 +62,6 @@ class ResolverTests: QuickSpec {
     }
 }
 
-class TestTest {}
+class TestTest<Value> {}
+
+typealias TestValue = TestTest<Int>
