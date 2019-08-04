@@ -703,15 +703,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				"Resolver::Resolver" /* Resolver */,
+				"Resolver::SwiftPMPackageDescription" /* ResolverPackageDescription */,
+				"Resolver::ResolverTests" /* ResolverTests */,
+				"Resolver::ResolverPackageTests::ProductTarget" /* ResolverPackageTests */,
 				"Nimble::Nimble" /* Nimble */,
 				"Nimble::SwiftPMPackageDescription" /* NimblePackageDescription */,
 				"Quick::Quick" /* Quick */,
-				"Quick::SwiftPMPackageDescription" /* QuickPackageDescription */,
 				"Quick::QuickSpecBase" /* QuickSpecBase */,
-				"Resolver::Resolver" /* Resolver */,
-				"Resolver::SwiftPMPackageDescription" /* ResolverPackageDescription */,
-				"Resolver::ResolverPackageTests::ProductTarget" /* ResolverPackageTests */,
-				"Resolver::ResolverTests" /* ResolverTests */,
+				"Quick::SwiftPMPackageDescription" /* QuickPackageDescription */,
 			);
 		};
 /* End PBXProject section */

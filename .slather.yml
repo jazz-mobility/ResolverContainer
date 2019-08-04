@@ -1,6 +1,6 @@
 coverage_service: coveralls
 workspace: Resolver.xcworkspace
 xcodeproj: Resolver.xcodeproj
-scheme: Resolver-Package
+scheme: Resolver
 ignore:
   - ResolverTests/*
