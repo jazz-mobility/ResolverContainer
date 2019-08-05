@@ -3,4 +3,5 @@ workspace: Resolver.xcworkspace
 xcodeproj: Resolver.xcodeproj
 scheme: Resolver
 ignore:
+  - ../*
   - ResolverTests/*
