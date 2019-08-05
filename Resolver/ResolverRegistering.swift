@@ -42,3 +42,11 @@ public protocol ResolverRegistering {
     func unregister<T>(_ type: T.Type) -> Bool
 
 }
+
+extension ResolverRegistering {
+
+    /// Registers an instance of the object
+    public func register<T>(instance: T) {
+        self.register { instance }
+    }
+}
