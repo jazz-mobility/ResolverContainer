@@ -14,6 +14,7 @@
 		7EA1A7ED22F7CED2007A588A /* ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7EA22F7CED2007A588A /* ResolverRegistering.swift */; };
 		7EA1A7EE22F7CED2007A588A /* ResolverContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7EB22F7CED2007A588A /* ResolverContainer.swift */; };
 		7EA1A7F422F7CF64007A588A /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 7EA1A7F322F7CF64007A588A /* Quick */; };
+		7EA1A7F722F7D254007A588A /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 7EA1A7F622F7D254007A588A /* Nimble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EA1A7F722F7D254007A588A /* Nimble in Frameworks */,
 				7EA1A7F422F7CF64007A588A /* Quick in Frameworks */,
 				7EA1A7D922F7CEA1007A588A /* Resolver.framework in Frameworks */,
 			);
@@ -147,6 +149,7 @@
 			name = ResolverTests;
 			packageProductDependencies = (
 				7EA1A7F322F7CF64007A588A /* Quick */,
+				7EA1A7F622F7D254007A588A /* Nimble */,
 			);
 			productName = ResolverTests;
 			productReference = 7EA1A7D822F7CEA1007A588A /* ResolverTests.xctest */;
@@ -182,6 +185,7 @@
 			mainGroup = 7EA1A7C522F7CEA0007A588A;
 			packageReferences = (
 				7EA1A7F222F7CF64007A588A /* XCRemoteSwiftPackageReference "Quick" */,
+				7EA1A7F522F7D254007A588A /* XCRemoteSwiftPackageReference "Nimble" */,
 			);
 			productRefGroup = 7EA1A7D022F7CEA1007A588A /* Products */;
 			projectDirPath = "";
@@ -488,6 +492,14 @@
 				minimumVersion = 2.1.0;
 			};
 		};
+		7EA1A7F522F7D254007A588A /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -495,6 +507,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7EA1A7F222F7CF64007A588A /* XCRemoteSwiftPackageReference "Quick" */;
 			productName = Quick;
+		};
+		7EA1A7F622F7D254007A588A /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7EA1A7F522F7D254007A588A /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
