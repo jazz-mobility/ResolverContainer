@@ -32,7 +32,7 @@
 import Foundation
 
 /// Thread safe container allowing to register and extract resolvers
-public class ResolverContainer {
+open class ResolverContainer {
 
     enum Error: Swift.Error {
         case unregisteredType(String)
