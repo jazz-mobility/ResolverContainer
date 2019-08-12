@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EA1A7D922F7CEA1007A588A /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA1A7CF22F7CEA1007A588A /* Resolver.framework */; };
+		7EA1A7D922F7CEA1007A588A /* ResolverContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */; };
 		7EA1A7DE22F7CEA1007A588A /* ResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */; };
 		7EA1A7E022F7CEA1007A588A /* Resolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA1A7D222F7CEA1007A588A /* Resolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EA1A7EC22F7CED2007A588A /* InstanceResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7E922F7CED1007A588A /* InstanceResolving.swift */; };
@@ -28,10 +28,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7EA1A7CF22F7CEA1007A588A /* Resolver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Resolver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E3B51C92301C33F00B22F16 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		7E3B51CA2301C39200B22F16 /* ResolverContainer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResolverContainer.podspec; sourceTree = "<group>"; };
+		7E3B51CC2301C46500B22F16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResolverContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1A7D222F7CEA1007A588A /* Resolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resolver.h; sourceTree = "<group>"; };
 		7EA1A7D322F7CEA1007A588A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EA1A7D822F7CEA1007A588A /* ResolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResolverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA1A7D822F7CEA1007A588A /* ResolverContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResolverContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTests.swift; sourceTree = "<group>"; };
 		7EA1A7DF22F7CEA1007A588A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA1A7E922F7CED1007A588A /* InstanceResolving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceResolving.swift; sourceTree = "<group>"; };
@@ -53,7 +56,7 @@
 			files = (
 				7EA1A7F722F7D254007A588A /* Nimble in Frameworks */,
 				7EA1A7F422F7CF64007A588A /* Quick in Frameworks */,
-				7EA1A7D922F7CEA1007A588A /* Resolver.framework in Frameworks */,
+				7EA1A7D922F7CEA1007A588A /* ResolverContainer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,9 @@
 		7EA1A7C522F7CEA0007A588A = {
 			isa = PBXGroup;
 			children = (
+				7E3B51C92301C33F00B22F16 /* Package.swift */,
+				7E3B51CA2301C39200B22F16 /* ResolverContainer.podspec */,
+				7E3B51CC2301C46500B22F16 /* README.md */,
 				7EA1A7D122F7CEA1007A588A /* Resolver */,
 				7EA1A7DC22F7CEA1007A588A /* ResolverTests */,
 				7EA1A7D022F7CEA1007A588A /* Products */,
@@ -72,8 +78,8 @@
 		7EA1A7D022F7CEA1007A588A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7EA1A7CF22F7CEA1007A588A /* Resolver.framework */,
-				7EA1A7D822F7CEA1007A588A /* ResolverTests.xctest */,
+				7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */,
+				7EA1A7D822F7CEA1007A588A /* ResolverContainerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,9 +119,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7EA1A7CE22F7CEA0007A588A /* Resolver */ = {
+		7EA1A7CE22F7CEA0007A588A /* ResolverContainer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EA1A7E322F7CEA1007A588A /* Build configuration list for PBXNativeTarget "Resolver" */;
+			buildConfigurationList = 7EA1A7E322F7CEA1007A588A /* Build configuration list for PBXNativeTarget "ResolverContainer" */;
 			buildPhases = (
 				7EA1A7CA22F7CEA0007A588A /* Headers */,
 				7EA1A7CB22F7CEA0007A588A /* Sources */,
@@ -126,16 +132,16 @@
 			);
 			dependencies = (
 			);
-			name = Resolver;
+			name = ResolverContainer;
 			packageProductDependencies = (
 			);
 			productName = Resolver;
-			productReference = 7EA1A7CF22F7CEA1007A588A /* Resolver.framework */;
+			productReference = 7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7EA1A7D722F7CEA1007A588A /* ResolverTests */ = {
+		7EA1A7D722F7CEA1007A588A /* ResolverContainerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7EA1A7E622F7CEA1007A588A /* Build configuration list for PBXNativeTarget "ResolverTests" */;
+			buildConfigurationList = 7EA1A7E622F7CEA1007A588A /* Build configuration list for PBXNativeTarget "ResolverContainerTests" */;
 			buildPhases = (
 				7EA1A7D422F7CEA1007A588A /* Sources */,
 				7EA1A7D522F7CEA1007A588A /* Frameworks */,
@@ -146,13 +152,13 @@
 			dependencies = (
 				7EA1A7DB22F7CEA1007A588A /* PBXTargetDependency */,
 			);
-			name = ResolverTests;
+			name = ResolverContainerTests;
 			packageProductDependencies = (
 				7EA1A7F322F7CF64007A588A /* Quick */,
 				7EA1A7F622F7D254007A588A /* Nimble */,
 			);
 			productName = ResolverTests;
-			productReference = 7EA1A7D822F7CEA1007A588A /* ResolverTests.xctest */;
+			productReference = 7EA1A7D822F7CEA1007A588A /* ResolverContainerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +180,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7EA1A7C922F7CEA0007A588A /* Build configuration list for PBXProject "Resolver" */;
+			buildConfigurationList = 7EA1A7C922F7CEA0007A588A /* Build configuration list for PBXProject "ResolverContainer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,8 +197,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7EA1A7CE22F7CEA0007A588A /* Resolver */,
-				7EA1A7D722F7CEA1007A588A /* ResolverTests */,
+				7EA1A7CE22F7CEA0007A588A /* ResolverContainer */,
+				7EA1A7D722F7CEA1007A588A /* ResolverContainerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		7EA1A7DB22F7CEA1007A588A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7EA1A7CE22F7CEA0007A588A /* Resolver */;
+			target = 7EA1A7CE22F7CEA0007A588A /* ResolverContainer */;
 			targetProxy = 7EA1A7DA22F7CEA1007A588A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -454,7 +460,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7EA1A7C922F7CEA0007A588A /* Build configuration list for PBXProject "Resolver" */ = {
+		7EA1A7C922F7CEA0007A588A /* Build configuration list for PBXProject "ResolverContainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EA1A7E122F7CEA1007A588A /* Debug */,
@@ -463,7 +469,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EA1A7E322F7CEA1007A588A /* Build configuration list for PBXNativeTarget "Resolver" */ = {
+		7EA1A7E322F7CEA1007A588A /* Build configuration list for PBXNativeTarget "ResolverContainer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EA1A7E422F7CEA1007A588A /* Debug */,
@@ -472,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7EA1A7E622F7CEA1007A588A /* Build configuration list for PBXNativeTarget "ResolverTests" */ = {
+		7EA1A7E622F7CEA1007A588A /* Build configuration list for PBXNativeTarget "ResolverContainerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EA1A7E722F7CEA1007A588A /* Debug */,

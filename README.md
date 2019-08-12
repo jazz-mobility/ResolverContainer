@@ -5,4 +5,4 @@
 [![Build Status](https://travis-ci.com/kzlekk/Resolver.svg?branch=master)](https://travis-ci.com/kzlekk/Resolver)
 [![Coverage Status](https://coveralls.io/repos/github/kzlekk/Resolver/badge.svg?branch=master)](https://coveralls.io/github/kzlekk/Resolver?branch=master)
 
-Simple resolving container implementation. Can be used for lazy dependency injection.
+Simple resolver container implementation written in Swift.

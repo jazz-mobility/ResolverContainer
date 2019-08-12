@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7EA1A7CE22F7CEA0007A588A"
-               BuildableName = "Resolver.framework"
-               BlueprintName = "Resolver"
-               ReferencedContainer = "container:Resolver.xcodeproj">
+               BuildableName = "ResolverContainer.framework"
+               BlueprintName = "ResolverContainer"
+               ReferencedContainer = "container:ResolverContainer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7EA1A7CE22F7CEA0007A588A"
-            BuildableName = "Resolver.framework"
-            BlueprintName = "Resolver"
-            ReferencedContainer = "container:Resolver.xcodeproj">
+            BuildableName = "ResolverContainer.framework"
+            BlueprintName = "ResolverContainer"
+            ReferencedContainer = "container:ResolverContainer.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -44,9 +44,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7EA1A7D722F7CEA1007A588A"
-               BuildableName = "ResolverTests.xctest"
-               BlueprintName = "ResolverTests"
-               ReferencedContainer = "container:Resolver.xcodeproj">
+               BuildableName = "ResolverContainerTests.xctest"
+               BlueprintName = "ResolverContainerTests"
+               ReferencedContainer = "container:ResolverContainer.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7EA1A7CE22F7CEA0007A588A"
-            BuildableName = "Resolver.framework"
-            BlueprintName = "Resolver"
-            ReferencedContainer = "container:Resolver.xcodeproj">
+            BuildableName = "ResolverContainer.framework"
+            BlueprintName = "ResolverContainer"
+            ReferencedContainer = "container:ResolverContainer.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
