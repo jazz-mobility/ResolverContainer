@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'ResolverContainer'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = 'Swift resolver container implementation'
   s.homepage         = 'https://github.com/kzlekk/Resolver'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Natan Zalkin' => 'natan.zalkin@me.com' }
-  s.source           = { :git => 'https://github.com/kzlekk/Resolver.git', :tag => "#{s.version}" }
+  s.source           = { :git => 'https://kzlekk@github.com/kzlekk/ResolverContainer.git', :tag => "#{s.version}" }
   s.module_name      = 'ResolverContainer'
   s.swift_version    = '5.0'
 
