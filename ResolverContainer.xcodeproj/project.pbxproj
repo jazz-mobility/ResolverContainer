@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7EA1A7D922F7CEA1007A588A /* ResolverContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */; };
 		7EA1A7DE22F7CEA1007A588A /* ResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */; };
-		7EA1A7E022F7CEA1007A588A /* Resolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA1A7D222F7CEA1007A588A /* Resolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EA1A7E022F7CEA1007A588A /* ResolverContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA1A7D222F7CEA1007A588A /* ResolverContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EA1A7EC22F7CED2007A588A /* InstanceResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7E922F7CED1007A588A /* InstanceResolving.swift */; };
 		7EA1A7ED22F7CED2007A588A /* ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7EA22F7CED2007A588A /* ResolverRegistering.swift */; };
 		7EA1A7EE22F7CED2007A588A /* ResolverContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7EB22F7CED2007A588A /* ResolverContainer.swift */; };
@@ -32,7 +32,7 @@
 		7E3B51CA2301C39200B22F16 /* ResolverContainer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ResolverContainer.podspec; sourceTree = "<group>"; };
 		7E3B51CC2301C46500B22F16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ResolverContainer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EA1A7D222F7CEA1007A588A /* Resolver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Resolver.h; sourceTree = "<group>"; };
+		7EA1A7D222F7CEA1007A588A /* ResolverContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResolverContainer.h; sourceTree = "<group>"; };
 		7EA1A7D322F7CEA1007A588A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA1A7D822F7CEA1007A588A /* ResolverContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResolverContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTests.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				7EA1A7EA22F7CED2007A588A /* ResolverRegistering.swift */,
 				7EA1A7E922F7CED1007A588A /* InstanceResolving.swift */,
 				7EA1A7EB22F7CED2007A588A /* ResolverContainer.swift */,
-				7EA1A7D222F7CEA1007A588A /* Resolver.h */,
+				7EA1A7D222F7CEA1007A588A /* ResolverContainer.h */,
 				7EA1A7D322F7CEA1007A588A /* Info.plist */,
 			);
 			path = Resolver;
@@ -112,7 +112,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA1A7E022F7CEA1007A588A /* Resolver.h in Headers */,
+				7EA1A7E022F7CEA1007A588A /* ResolverContainer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +388,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.4;
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kzlekk.ResolverContainer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -414,7 +414,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.4;
+				MARKETING_VERSION = 1.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kzlekk.ResolverContainer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

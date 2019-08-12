@@ -20,7 +20,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "ResolverContainer", dependencies: [], path: "Resolver"),
-        .testTarget(name: "ResolverTests", dependencies: ["ResolverContainer", "Quick", "Nimble"], path: "ResolverTests")
+        .testTarget(name: "ResolverContainerTests", dependencies: ["ResolverContainer", "Quick", "Nimble"], path: "ResolverTests")
     ],
     swiftLanguageVersions: [ .v5 ]
 )
