@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ResolverContainer'
-  s.version          = '1.2.5'
+  s.version          = '1.2.6'
   s.summary          = 'Swift resolver container implementation'
   s.homepage         = 'https://github.com/kzlekk/Resolver'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
