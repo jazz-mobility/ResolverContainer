@@ -9,11 +9,7 @@
 #import <Foundation/Foundation.h>
 
 //! Project version number for Resolver.
-FOUNDATION_EXPORT double ResolverVersionNumber;
+FOUNDATION_EXPORT double ResolverContainerVersionNumber;
 
 //! Project version string for Resolver.
-FOUNDATION_EXPORT const unsigned char ResolverVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <Resolver/PublicHeader.h>
-
-
+FOUNDATION_EXPORT const unsigned char ResolverContainerVersionString[];
