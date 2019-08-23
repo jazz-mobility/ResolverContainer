@@ -9,7 +9,7 @@
 import Quick
 import Nimble
 
-@testable import Resolver
+@testable import ResolverContainer
 
 class ResolverTests: QuickSpec {
     override func spec() {
@@ -35,6 +35,37 @@ class ResolverTests: QuickSpec {
 
                     let object: TestTest<Int> = try! container.resolve()
                     expect(object).to(beIdenticalTo(instance))
+                }
+
+                context("when merged with another container") {
+
+                    var another: ResolverContainer!
+
+                    beforeEach {
+                        another = ResolverContainer {
+                            $0.register(instance: TestValue())
+                        }
+                    }
+
+                    context("by replacing registered resolvers") {
+                        beforeEach {
+                            container.merge(with: another, preservingRegisteredResolvers: false)
+                        }
+
+                        it("replaces exiting resolver with the new form another container") {
+                            expect(try! container.resolve(TestValue.self)).to(beIdenticalTo(try! another.resolve(TestValue.self)))
+                        }
+                    }
+
+                    context("by preserving registered resolvers") {
+                        beforeEach {
+                            container.merge(with: another, preservingRegisteredResolvers: true)
+                        }
+
+                        it("replaces exiting resolver with the new form another container") {
+                            expect(try! container.resolve(TestValue.self)).toNot(beIdenticalTo(try! another.resolve(TestValue.self)))
+                        }
+                    }
                 }
 
                 context("and unregistered object") {

@@ -34,13 +34,13 @@ import Foundation
 /// Thread safe container allowing to register and extract resolvers
 open class ResolverContainer {
 
-    enum Error: Swift.Error {
+    public enum Error: Swift.Error {
         case unregisteredType(String)
         case typeMismatch(expected: String)
     }
 
-    private var entries = [ObjectIdentifier: () -> Any]()
-    private var syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue")
+    var entries = [ObjectIdentifier: () -> Any]()
+    var syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue")
 
     public init(registration: ((ResolverContainer) -> Void)? = nil) {
         defer {
@@ -48,6 +48,17 @@ open class ResolverContainer {
         }
     }
 
+    /// Merges entries from another container.
+    /// - Parameter container: The source container to merge entries from
+    /// - Parameter preservingRegisteredResolvers: When set to true,
+    /// any resolvers from another container registered under the same type will be ignored.
+    /// If set to false, existing resolvers registered under the same type will be replaced with
+    /// the resolvers from another container
+    public func merge(with container: ResolverContainer, preservingRegisteredResolvers: Bool = false) {
+        entries.merge(container.entries) { (current, new) in
+            return preservingRegisteredResolvers ? current : new
+        }
+    }
 }
 
 extension ResolverContainer: ResolverRegistering {
