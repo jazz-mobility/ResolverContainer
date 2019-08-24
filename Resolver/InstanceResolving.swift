@@ -29,8 +29,6 @@
 *
 */
 
-import Foundation
-
 /// A protocol describing resolving of instance or metatype
 public protocol InstanceResolving {
 

@@ -29,8 +29,6 @@
 *
 */
 
-import Foundation
-
 /// A protocol describing registration of specific resolver
 public protocol ResolverRegistering {
 

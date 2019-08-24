@@ -29,8 +29,6 @@
 *
 */
 
-import Foundation
-
 /// Thread safe container allowing to register and extract resolvers
 open class ResolverContainer {
 
