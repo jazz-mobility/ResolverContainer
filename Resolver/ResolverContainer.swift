@@ -74,7 +74,7 @@ extension ResolverContainer: ResolverRegistering {
 
 }
 
-extension ResolverContainer: InstanceResolving {
+extension ResolverContainer: AnyResolving {
 
     public func resolve<T>(_ type: T.Type) throws -> T {
 

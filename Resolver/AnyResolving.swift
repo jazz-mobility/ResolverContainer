@@ -1,5 +1,5 @@
 //
-//  InstanceResolving.swift
+//  AnyResolving.swift
 //  Resolver
 //
 //  Created by Natan Zalkin on 26/07/2019.
@@ -30,14 +30,14 @@
 */
 
 /// A protocol describing resolving of instance or metatype
-public protocol InstanceResolving {
+public protocol AnyResolving {
 
     /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found
     func resolve<T>(_ type: T.Type) throws -> T
 
 }
 
-public extension InstanceResolving {
+public extension AnyResolving {
 
     /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found
     func resolve<T>() throws -> T {
