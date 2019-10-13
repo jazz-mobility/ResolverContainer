@@ -39,10 +39,16 @@ open class ResolverContainer {
         case typeMismatch(expected: String)
     }
 
-    var entries = [ObjectIdentifier: () -> Any]()
-    var syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue", qos: .userInitiated)
+    var entries: [ObjectIdentifier: () -> Any]
+    var syncQueue: DispatchQueue
 
-    public init(registration: ((ResolverRegistering) -> Void)? = nil) {
+    /// Initializes the container.
+    /// - Parameter qos: The quality of service of the underlying queue used to sync the container changes when accessed from multiple threads.
+    /// - Parameter registration: The closure allowing to pre-configure the container upon initialization.
+    public init(qos: DispatchQoS = .userInteractive, registration: ((ResolverRegistering) -> Void)? = nil) {
+        entries = [:]
+        syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue", qos: qos)
+
         defer {
             registration?(self)
         }
