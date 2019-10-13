@@ -37,7 +37,7 @@ public protocol ResolverRegistering {
 
     /// Unregister resolver associated with specified type.
     @discardableResult
-    func unregister<T>(_ type: T.Type) -> Bool
+    func unregister<T>(_ type: T.Type) -> T?
 
     /// Unregisters all resolvers previously registered.
     func unregisterAll()

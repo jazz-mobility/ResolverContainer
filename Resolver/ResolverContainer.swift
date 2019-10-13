@@ -68,8 +68,14 @@ extension ResolverContainer: ResolverRegistering {
     }
 
     @discardableResult
-    public func unregister<T>(_ type: T.Type) -> Bool {
-        return syncQueue.sync { entries.removeValue(forKey: ObjectIdentifier(T.self)) != nil }
+    public func unregister<T>(_ type: T.Type = T.self) -> T? {
+        return syncQueue.sync {
+            if let resolve = entries.removeValue(forKey: ObjectIdentifier(T.self)) {
+                return resolve() as? T
+            }
+
+            return nil
+        }
     }
 
     public func unregisterAll() {
@@ -91,5 +97,4 @@ extension ResolverContainer: AnyResolving {
 
         return entry
     }
-
 }

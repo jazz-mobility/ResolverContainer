@@ -113,12 +113,16 @@ class ResolverContainerTests: QuickSpec {
 
                 context("and unregistered object") {
 
+                    var unregistered: TestValue?
+
                     beforeEach {
-                        container.unregister(TestValue.self)
-                        container.unregister(TestTest<Int>.self)
+                        unregistered = container.unregister()
                     }
 
                     it("fails to resolve the type") {
+                        
+                        expect(unregistered).to(beIdenticalTo(instance))
+
                         do {
                             let _ = try container.resolve(TestValue.self)
                         } catch {
