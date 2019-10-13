@@ -32,14 +32,19 @@
 /// A protocol describing resolving of instance or metatype
 public protocol AnyResolving {
 
-    /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found
+    /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found.
     func resolve<T>(_ type: T.Type) throws -> T
 
 }
 
 public extension AnyResolving {
 
-    /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found
+    /// Try to resolve instance or metatype assosiated with its metatype designator. Returns nil if no sutable resolver found.
+    subscript<T>(_ type: T.Type) -> T? {
+        return try? resolve(T.self)
+    }
+
+    /// Try to resolve instance or metatype assosiated with its metatype designator. Throws error if no sutable resolver found.
     func resolve<T>() throws -> T {
         return try resolve(T.self)
     }

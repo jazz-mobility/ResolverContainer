@@ -34,26 +34,26 @@ import Dispatch
 /// Thread safe container allowing to register and extract resolvers
 open class ResolverContainer {
 
-    public enum Error: Swift.Error {
+    public enum Error: Swift.Error, Equatable {
         case unregisteredType(String)
         case typeMismatch(expected: String)
     }
 
     var entries = [ObjectIdentifier: () -> Any]()
-    var syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue")
+    var syncQueue = DispatchQueue(label: "ResolverContainer.SyncQueue", qos: .userInitiated)
 
-    public init(registration: ((ResolverContainer) -> Void)? = nil) {
+    public init(registration: ((ResolverRegistering) -> Void)? = nil) {
         defer {
             registration?(self)
         }
     }
 
     /// Merges entries from another container.
-    /// - Parameter container: The source container to merge entries from
+    /// - Parameter container: The source container to merge entries from.
     /// - Parameter preservingRegisteredResolvers: When set to true,
     /// any resolvers from another container registered under the same type will be ignored.
     /// If set to false, existing resolvers registered under the same type will be replaced with
-    /// the resolvers from another container
+    /// the resolvers from another container.
     public func merge(with container: ResolverContainer, preservingRegisteredResolvers: Bool = false) {
         entries.merge(container.entries) { (current, new) in
             return preservingRegisteredResolvers ? current : new
@@ -72,6 +72,9 @@ extension ResolverContainer: ResolverRegistering {
         return syncQueue.sync { entries.removeValue(forKey: ObjectIdentifier(T.self)) != nil }
     }
 
+    public func unregisterAll() {
+        syncQueue.sync { entries.removeAll() }
+    }
 }
 
 extension ResolverContainer: AnyResolving {

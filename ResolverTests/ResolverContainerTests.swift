@@ -1,5 +1,5 @@
 //
-//  ResolverTests.swift
+//  ResolverContainerTests.swift
 //  ResolverTests
 //
 //  Created by Natan Zalkin on 02/08/2019.
@@ -11,7 +11,11 @@ import Nimble
 
 @testable import ResolverContainer
 
-class ResolverTests: QuickSpec {
+class TestTest<Value> {}
+
+typealias TestValue = TestTest<Int>
+
+class ResolverContainerTests: QuickSpec {
     override func spec() {
         describe("ResolverContainer") {
             var container: ResolverContainer!
@@ -78,13 +82,13 @@ class ResolverTests: QuickSpec {
                         do {
                             let _ = try container.resolve(TestValue.self)
                         } catch {
-                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
+                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest<Int>")))
                         }
 
                         do {
                             let _: TestTest<Int> = try container.resolve()
                         } catch {
-                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
+                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest<Int>")))
                         }
                     }
                 }
@@ -101,7 +105,7 @@ class ResolverTests: QuickSpec {
                 }
 
                 it("can resolve it later") {
-                    expect(try! container.resolve(TestValue.self)).to(beIdenticalTo(instance))
+                    expect(container[TestValue.self]).to(beIdenticalTo(instance))
 
                     let object: TestTest<Int> = try! container.resolve()
                     expect(object).to(beIdenticalTo(instance))
@@ -110,6 +114,7 @@ class ResolverTests: QuickSpec {
                 context("and unregistered object") {
 
                     beforeEach {
+                        container.unregister(TestValue.self)
                         container.unregister(TestTest<Int>.self)
                     }
 
@@ -117,13 +122,34 @@ class ResolverTests: QuickSpec {
                         do {
                             let _ = try container.resolve(TestValue.self)
                         } catch {
-                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
+                            expect(error as? ResolverContainer.Error).to(equal(ResolverContainer.Error.unregisteredType("TestTest<Int>")))
                         }
 
                         do {
-                            let _: TestTest<Int> = try container.resolve()
+                            let _ = try container.resolve(TestTest<Int>.self)
                         } catch {
-                            expect(error).to(matchError(ResolverContainer.Error.unregisteredType("TestTest")))
+                            expect(error as? ResolverContainer.Error).to(equal(ResolverContainer.Error.unregisteredType("TestTest<Int>")))
+                        }
+                    }
+                }
+
+                context("and unregistered all objects") {
+
+                    beforeEach {
+                        container.unregisterAll()
+                    }
+
+                    it("fails to resolve any type") {
+                        do {
+                            let _ = try container.resolve(TestValue.self)
+                        } catch {
+                            expect(error as? ResolverContainer.Error).to(equal(ResolverContainer.Error.unregisteredType("TestTest<Int>")))
+                        }
+
+                        do {
+                            let _ = try container.resolve(TestTest<Int>.self)
+                        } catch {
+                            expect(error as? ResolverContainer.Error).to(equal(ResolverContainer.Error.unregisteredType("TestTest<Int>")))
                         }
                     }
                 }
@@ -131,7 +157,3 @@ class ResolverTests: QuickSpec {
         }
     }
 }
-
-class TestTest<Value> {}
-
-typealias TestValue = TestTest<Int>

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7EA1A7D922F7CEA1007A588A /* ResolverContainer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA1A7CF22F7CEA1007A588A /* ResolverContainer.framework */; };
-		7EA1A7DE22F7CEA1007A588A /* ResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */; };
+		7EA1A7DE22F7CEA1007A588A /* ResolverContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7DD22F7CEA1007A588A /* ResolverContainerTests.swift */; };
 		7EA1A7E022F7CEA1007A588A /* ResolverContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EA1A7D222F7CEA1007A588A /* ResolverContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EA1A7EC22F7CED2007A588A /* AnyResolving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7E922F7CED1007A588A /* AnyResolving.swift */; };
 		7EA1A7ED22F7CED2007A588A /* ResolverRegistering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA1A7EA22F7CED2007A588A /* ResolverRegistering.swift */; };
@@ -35,7 +35,7 @@
 		7EA1A7D222F7CEA1007A588A /* ResolverContainer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResolverContainer.h; sourceTree = "<group>"; };
 		7EA1A7D322F7CEA1007A588A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA1A7D822F7CEA1007A588A /* ResolverContainerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResolverContainerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverTests.swift; sourceTree = "<group>"; };
+		7EA1A7DD22F7CEA1007A588A /* ResolverContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverContainerTests.swift; sourceTree = "<group>"; };
 		7EA1A7DF22F7CEA1007A588A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EA1A7E922F7CED1007A588A /* AnyResolving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyResolving.swift; sourceTree = "<group>"; };
 		7EA1A7EA22F7CED2007A588A /* ResolverRegistering.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResolverRegistering.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		7EA1A7DC22F7CEA1007A588A /* ResolverTests */ = {
 			isa = PBXGroup;
 			children = (
-				7EA1A7DD22F7CEA1007A588A /* ResolverTests.swift */,
+				7EA1A7DD22F7CEA1007A588A /* ResolverContainerTests.swift */,
 				7EA1A7DF22F7CEA1007A588A /* Info.plist */,
 			);
 			path = ResolverTests;
@@ -235,7 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EA1A7DE22F7CEA1007A588A /* ResolverTests.swift in Sources */,
+				7EA1A7DE22F7CEA1007A588A /* ResolverContainerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,7 +388,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kzlekk.ResolverContainer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -414,7 +414,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kzlekk.ResolverContainer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;

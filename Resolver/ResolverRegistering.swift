@@ -29,21 +29,23 @@
 *
 */
 
-/// A protocol describing registration of specific resolver
+/// A protocol describing registration of specific resolver.
 public protocol ResolverRegistering {
 
-    /// Registers new resolver of specified type
+    /// Registers new resolver of specified type.
     func register<T>(resolver: @escaping () -> T)
 
-    /// Unregister resolver associated with specified type
+    /// Unregister resolver associated with specified type.
     @discardableResult
     func unregister<T>(_ type: T.Type) -> Bool
 
+    /// Unregisters all resolvers previously registered.
+    func unregisterAll()
 }
 
 extension ResolverRegistering {
 
-    /// Registers an instance of the object
+    /// Registers an instance of the object.
     public func register<T>(instance: T) {
         self.register { instance }
     }
