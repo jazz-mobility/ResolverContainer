@@ -14,13 +14,8 @@ let package = Package(
     products: [
         .library(name: "ResolverContainer", targets: ["ResolverContainer"])
     ],
-    dependencies: [
-        .package(url: "https://github.com/Quick/Quick.git", from: "2.0.0"),
-        .package(url: "https://github.com/Quick/Nimble.git", from: "8.0.0"),
-    ],
     targets: [
         .target(name: "ResolverContainer", dependencies: [], path: "Resolver"),
-        .testTarget(name: "ResolverContainerTests", dependencies: ["ResolverContainer", "Quick", "Nimble"], path: "ResolverTests")
     ],
     swiftLanguageVersions: [ .v5 ]
 )
